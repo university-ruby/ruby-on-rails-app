@@ -1,24 +1,12 @@
-# README
+# App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Commans I have used
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+rails generate scaffold clinic title:string address:string
+rails generate scaffold department title:string clinic:references
+rails generate scaffold doctor name:string surname:string birthday_date:date department:references specialization:references
+rails generate scaffold specialization title:string
+rails generate scaffold patient name:string surname:string birthday_date:date
+rails generate scaffold patient_card doctor_comment:string clinic:references patient:references
+```
