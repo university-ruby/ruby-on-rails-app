@@ -1,7 +1,8 @@
 require "test_helper"
 
 class DepartmentTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should not save department without created_at and updated_at" do
+    department = Department.new
+    assert_not department.save
+  end
 end

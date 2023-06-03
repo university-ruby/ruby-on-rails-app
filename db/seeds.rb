@@ -78,3 +78,11 @@ end
     updated_at: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now)
   )
 end
+
+connection.execute("DROP VIEW IF EXISTS LastUpdatedClinics")
+connection.execute("CREATE VIEW LastUpdatedClinics AS
+SELECT title, updated_at FROM clinics ORDER BY updated_at DESC")
+
+connection.execute("DROP VIEW IF EXISTS LastUpdatedDepartments")
+connection.execute("CREATE VIEW LastUpdatedDepartments AS
+SELECT title, updated_at FROM departments ORDER BY updated_at DESC")
