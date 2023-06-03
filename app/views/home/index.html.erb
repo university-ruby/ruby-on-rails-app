@@ -1,13 +1,7 @@
-<h1>Home#index</h1>
+<h1>Home</h1>
 
-<%= link_to 'Clinics', clinics_path, class: 'nav-link active'%>
-<br>
-<%= link_to 'Departments', departments_path, class: 'nav-link active'%>
-<br>
-<%= link_to 'Doctors', doctors_path, class: 'nav-link active'%>
-<br>
-<%= link_to 'Specializations', specializations_path, class: 'nav-link active'%>
-<br>
-<%= link_to 'Patients', patients_path, class: 'nav-link active'%>
-<br>
-<%= link_to 'Patient Cards', patient_cards_path, class: 'nav-link active'%>
+<% if user_signed_in? %>
+  <%= link_to 'Menu', menu_index_path, class: 'nav-link active'%>
+<% else %>
+  Register first !
+<% end %>

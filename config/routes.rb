@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'menu/index'
   devise_for :users
   resources :patient_cards
   resources :patients
