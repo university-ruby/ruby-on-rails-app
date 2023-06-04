@@ -27,6 +27,12 @@ gem 'sass-rails'
 
 gem 'nokogiri'
 
+gem 'responders'
+
+gem 'prawn'
+
+gem 'prawn-table'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 

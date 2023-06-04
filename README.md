@@ -1,6 +1,43 @@
 # Kasianenko Mykyta CS31
 Hospital app
 
+## Routes
+
+Sure! Here's the table in Markdown format:
+
+| Prefix | Verb | URI Pattern | Controller#Action |
+| ------ | ---- | ----------- | ----------------- |
+| info_documentation_index | GET | /info_documentation/index(.:format) | info_documentation#index |
+| info_documentation_csv | GET | /info_documentation/csv(.:format) | info_documentation#csv |
+| info_documentation_pdf | GET | /info_documentation/pdf(.:format) | info_documentation#pdf |
+| info_documentation/pdf_by_clinic_id/:clinic_id | GET | /info_documentation/pdf_by_clinic_id/:clinic_id(.:format) | info_documentation#pdf_by_clinic_id |
+| info_documentation/pdf_by_patient_id/:patient_id | GET | /info_documentation/pdf_by_patient_id/:patient_id(.:format) | info_documentation#pdf_by_patient_id |
+| new_admin_user_session | GET | /admin/login(.:format) | active_admin/devise/sessions#new |
+| admin_user_session | POST | /admin/login(.:format) | active_admin/devise/sessions#create |
+| destroy_admin_user_session | DELETE<br>GET | /admin/logout(.:format) | active_admin/devise/sessions#destroy |
+| new_admin_user_password | GET | /admin/password/new(.:format) | active_admin/devise/passwords#new |
+| edit_admin_user_password | GET | /admin/password/edit(.:format) | active_admin/devise/passwords#edit |
+| admin_user_password | PATCH | /admin/password(.:format) | active_admin/devise/passwords#update |
+| admin_user_password | PUT | /admin/password(.:format) | active_admin/devise/passwords#update |
+| admin_user_password | POST | /admin/password(.:format) | active_admin/devise/passwords#create |
+| admin_root | GET | /admin(.:format) | admin/dashboard#index |
+| batch_action_admin_admin_users | POST | /admin/admin_users/batch_action(.:format) | admin/admin_users#batch_action |
+| admin_admin_users | GET | /admin/admin_users(.:format) | admin/admin_users#index |
+| admin_admin_users | POST | /admin/admin_users(.:format) | admin/admin_users#create |
+| new_admin_admin_user | GET | /admin/admin_users/new(.:format) | admin/admin_users#new |
+| edit_admin_admin_user | GET | /admin/admin_users/:id/edit(.:format) | admin/admin_users#edit |
+| admin_admin_user | GET | /admin/admin_users/:id(.:format) | admin/admin_users#show |
+| admin_admin_user | PATCH | /admin/admin_users/:id(.:format) | admin/admin_users#update |
+| admin_admin_user | PUT | /admin/admin_users/:id(.:format) | admin/admin_users#update |
+| admin_admin_user | DELETE | /admin/admin_users/:id(.:format) | admin/admin_users#destroy |
+| batch_action_admin_clinics | POST | /admin/clinics/batch_action(.:format) | admin/clinics#batch_action |
+| admin_clinics | GET | /admin/clinics(.:format) | admin/clinics#index |
+| admin_clinics | POST | /admin/clinics(.:format) | admin/clinics#create |
+| new_admin_clinic | GET | /admin/clinics/new(.:format) | admin/clinics#new |
+| edit_admin_clinic | GET | /admin/clinics/:id/edit(.:format) | admin/clinics#edit |
+| admin_clinic | GET | /admin/clinics/:id(.:format)|
+
+
 
 ### Labs
 

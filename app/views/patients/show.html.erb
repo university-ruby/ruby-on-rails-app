@@ -7,4 +7,5 @@
   <%= link_to "Back to patients", patients_path %>
 
   <%= button_to "Destroy this patient", @patient, method: :delete %>
+  <%= link_to "PDF", "http://127.0.0.1:3000/info_documentation/pdf_by_patient_id/#{@patient.id}" %>
 </div>
