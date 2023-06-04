@@ -21,6 +21,8 @@ gem 'faker'
 
 gem 'kaminari'
 
+gem 'nokogiri'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
