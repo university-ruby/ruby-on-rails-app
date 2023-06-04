@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   get 'menu/index'
   get 'patients/by_clinic/:clinic_id', to: 'patients#by_clinic'
   devise_for :users

@@ -86,3 +86,5 @@ SELECT title, updated_at FROM clinics ORDER BY updated_at DESC")
 connection.execute("DROP VIEW IF EXISTS LastUpdatedDepartments")
 connection.execute("CREATE VIEW LastUpdatedDepartments AS
 SELECT title, updated_at FROM departments ORDER BY updated_at DESC")
+
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
