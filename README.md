@@ -28,5 +28,5 @@ Hospital app
   додати тести
 - [X] Task 9 ->  додати паралельне виконання
   за допомогою Thread
-- [ ] Task 10 -> Admin Panel
-- [ ] Task 11 -> Active Storage
+- [X] Task 10 -> Admin Panel
+- [X] Task 11 -> Active Storage

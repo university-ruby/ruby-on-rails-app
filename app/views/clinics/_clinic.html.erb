@@ -9,3 +9,9 @@
   <% department_id_array.append(d.id) %>
 <% end %>
 <td><%= Doctor.where(department_id: department_id_array).size %></td>
+
+<td>
+  <% clinic.pictures.each do |picture| %>
+    <%= link_to image_tag(picture, style: "width:50px; height:50px"), picture %>
+  <% end %>
+</td>

@@ -65,6 +65,6 @@ class ClinicsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def clinic_params
-      params.require(:clinic).permit(:title, :address)
+      params.require(:clinic).permit(:title, :address, pictures: [])
     end
 end
