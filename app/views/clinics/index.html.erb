@@ -3,12 +3,29 @@
 <h1>Clinics</h1>
 
 <div id="clinics">
-  <% @clinics.each do |clinic| %>
-    <%= render clinic %>
-    <p>
-      <%= link_to "Show this clinic", clinic %>
-    </p>
-  <% end %>
+  <table class="table">
+    <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Address</th>
+          <th scope="col">Year</th>
+          <th scope="col">Number of departments</th>
+          <th scope="col">Number of Doctors</th>
+          <th scope="col">Show</th>
+        </tr>
+    </thead>
+      <% @clinics.each do |clinic| %>
+          <tbody>
+              <tr>
+                <%= render clinic %>
+                <td><%= link_to "Show this clinic", clinic %></td>
+              </tr>
+          </tbody>
+      <% end %>
+  </table>
 </div>
 
 <%= link_to "New clinic", new_clinic_path %>
+
+<%= paginate @clinics %>

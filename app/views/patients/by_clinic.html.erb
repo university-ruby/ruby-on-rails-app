@@ -1,0 +1,35 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Patients by clinic</h1>
+
+<div id="clinics">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name Surname</th>
+      <th scope="col">Age</th>
+      <th scope="col">Card Number</th>
+      <th scope="col">Number</th>
+      <th scope="col">Card</th>
+      <th scope="col">Show</th>
+    </tr>
+    </thead>
+    <% @patients.each do |patient| %>
+      <tbody>
+      <tr>
+        <th scope="row"><%= patient.id %></th>
+        <td><%= patient.name + " " + patient.surname %></td>
+        <td><%= DateTime.now.strftime("%Y").to_i - DateTime.iso8601(patient.birthday_date.to_s).strftime("%Y").to_i %></td>
+        <% pc = PatientCard.where(patient_id: patient.id)[0] %>
+        <td><%= pc.id %></td>
+        <td><%= pc.id + 5 %></td>
+        <td><%= link_to "#{patient.name + " " + patient.surname}", pc %></td>
+        <td><%= link_to "Show this patient", patient %></td>
+      </tr>
+      </tbody>
+    <% end %>
+  </table>
+</div>
+
+<%= paginate @patients %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'menu/index'
+  get 'patients/by_clinic/:clinic_id', to: 'patients#by_clinic'
   devise_for :users
   resources :patient_cards
   resources :patients

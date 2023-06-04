@@ -19,7 +19,7 @@ User.delete_all
   #   updated_at: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now)
   # )
   connection.execute(
-    "INSERT INTO clinics (title, address, created_at, updated_at) VALUES (\"#{Faker::Company.name}\", \"#{Faker::Address.street_address}\", \"#{Faker::Time.between(from: DateTime.now - 1, to: DateTime.now)}\", \"#{Faker::Time.between(from: DateTime.now - 1, to: DateTime.now)}\")"
+    "INSERT INTO clinics (title, address, created_at, updated_at, year) VALUES (\"#{Faker::Company.name}\", \"#{Faker::Address.street_address}\", \"#{Faker::Time.between(from: DateTime.now - 1, to: DateTime.now)}\", \"#{Faker::Time.between(from: DateTime.now - 1, to: DateTime.now)}\", #{Faker::Number.between(from: 1000, to: 2023)})"
   )
 end
 

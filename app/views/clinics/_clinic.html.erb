@@ -1,12 +1,11 @@
-<div id="<%= dom_id clinic %>">
-  <p>
-    <strong>Title:</strong>
-    <%= clinic.title %>
-  </p>
-
-  <p>
-    <strong>Address:</strong>
-    <%= clinic.address %>
-  </p>
-
-</div>
+<th scope="row"><%= clinic.id %></th>
+<td><%= clinic.title %></td>
+<td><%= clinic.address %></td>
+<td><%= clinic.year %></td>
+<td><%= Department.where(clinic_id: clinic.id).size %></td>
+<% department_id_array = Array.new %>
+<% departments = Department.where(clinic_id: clinic.id) %>
+<% departments.each do |d| %>
+  <% department_id_array.append(d.id) %>
+<% end %>
+<td><%= Doctor.where(department_id: department_id_array).size %></td>

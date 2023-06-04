@@ -8,3 +8,5 @@
 
   <%= button_to "Destroy this clinic", @clinic, method: :delete %>
 </div>
+
+<%= link_to "Show patients", "http://127.0.0.1:3000/patients/by_clinic/#{@clinic.id}" %>

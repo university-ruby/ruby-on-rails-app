@@ -57,6 +57,18 @@ class PatientsController < ApplicationController
     end
   end
 
+  def by_clinic
+    @clinic_id = params[:clinic_id].to_i
+    @patient_cards = PatientCard.where(clinic_id: @clinic_id)
+
+    @patient_id_array = Array.new
+    @patient_cards.each do |pc|
+      @patient_id_array.append(pc.patient_id)
+    end
+
+    @patients = Patient.where(id: @patient_id_array).page(params[:page]).per(5)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_patient
